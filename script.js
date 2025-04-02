@@ -1,58 +1,62 @@
-// Variables
-let menu = document.querySelector(".menu-icon");
-let navbar = document.querySelector(".menu");
+// -- Select DOM Elements --
+// Menu and Navbar for mobile toggle
+const menu = document.querySelector(".menu-icon");
+const navbar = document.querySelector(".menu");
 
-// Menu Toggle
-menu.onclick = () => {
+// Notification Bell Element
+const bell = document.querySelector(".notification");
+const bellIcon = document.querySelector("#bell-icon");
+
+// -- Menu Toggle Function --
+menu.addEventListener("click", () => {
   navbar.classList.toggle("active");
   menu.classList.toggle("move");
+  // Close the notification bell if menu is toggled
   bell.classList.remove("active");
-};
+});
 
-// Notification toggle
-let bell = document.querySelector(".notification");
-document.querySelector("#bell-icon").onclick = () => {
+// -- Notification Bell Toggle Function --
+bellIcon.addEventListener("click", () => {
   bell.classList.toggle("active");
-};
+});
 
-// Swipe Function
+// -- Swiper (Trending Content) Initialization --
 var swiper = new Swiper(".trending-content", {
-  slidesPerView: 1,
-  spaceBetween: 10,
+  slidesPerView: 1,  // Show one slide at a time on small screens
+  spaceBetween: 10,   // Space between slides
   autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
+    delay: 5000,      // Delay between slides (5 seconds)
+    disableOnInteraction: false, // Continue autoplay after interaction
   },
   pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+    el: ".swiper-pagination", // Pagination controls
+    clickable: true,          // Make pagination clickable
   },
   breakpoints: {
     640: {
-      slidesPerView: 2,
-      spaceBetween: 20,
+      slidesPerView: 2,       // Show 2 slides on small devices (>=640px)
+      spaceBetween: 20,       // Space between slides
     },
     768: {
-      slidesPerView: 3,
-      spaceBetween: 15,
+      slidesPerView: 3,       // Show 3 slides on medium devices (>=768px)
+      spaceBetween: 15,       // Space between slides
     },
     1068: {
-      slidesPerView: 4,
-      spaceBetween: 20,
+      slidesPerView: 4,       // Show 4 slides on large devices (>=1068px)
+      spaceBetween: 20,       // Space between slides
     },
   },
 });
 
-// ScrollBar OnScroll Function
-window.onscroll = function () {
-  mufunction();
-};
+// -- Scroll Progress Bar Update --
+window.addEventListener("scroll", updateScrollBar);
 
-function mufunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("scroll-bar").style.width = scrolled + "%";
+function updateScrollBar() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  const scrollBar = document.getElementById("scroll-bar");
+  if (scrollBar) {
+    scrollBar.style.width = `${scrolled}%`; // Update scroll bar width
+  }
 }
