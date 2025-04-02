@@ -16,12 +16,10 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-/* Variables */
-
+/* Color Variables */
 :root {
     --main-color: #fa5353;
-    /* Secondary Color*/
-    --second-color: #5f3dad;
+    --secondary-color: #5f3dad;
     --dark-color: #181b2b;
     --light-color: #322f40;
     --text-color: hsl(0, 0%, 91%);
@@ -84,7 +82,6 @@ header {
     transform: rotate(352deg);
     transition: 0.3s all linear smooth;
 }
-
 
 .logo span {
     color: var(--main-color);
@@ -201,8 +198,7 @@ header {
     font-size: 1.8rem;
 }
 
-/* Notification */
-
+/* Notification Styles */
 .notification {
     position: absolute;
     top: 110%;
@@ -241,12 +237,7 @@ header {
     background: hsl(0, 0%, 100%, 0.4);
 }
 
-section {
-    padding: 4rem 0 3rem;
-}
-
 /* Home Section */
-
 .home {
     position: relative;
     min-height: 540px;
@@ -297,7 +288,6 @@ section {
 }
 
 /* Trending */
-
 .heading {
     display: flex;
     align-items: center;
@@ -312,8 +302,6 @@ section {
 }
 
 /* Trending content */
-
-
 .box {
     position: relative;
     width: 100%;
@@ -354,7 +342,6 @@ section {
     text-decoration: underline;
 }
 
-
 .rating-download {
     display: flex;
     justify-content: space-between;
@@ -388,229 +375,7 @@ section {
     background-color: var(--dark-color);
 }
 
-/* New Section */
-
-.pacman-icon {
-    width: 20px;
-    text-align: center;
-    margin-right: 5px;
-    height: 16px;
-}
-
-.new-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
-    gap: 1.2rem;
-
-}
-
-.up-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3rem;
-    margin-left: 2rem;
-    width: 150px;
-    text-align: center;
-    justify-content: center;
-}
-
-.up-page a {
-    padding: 15px;
-    background-color: var(--main-color);
-    border-radius: 50%;
-    color: var(--text-color);
-    font-size: 1rem;
-    font-weight: 400;
-    text-align: center;
-}
-
-.up-page a:hover,
-.up-page a:focus {
-    background-color: var(--light-color);
-    transition: 0.3s all linear;
-}
-
-.copyright {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    user-select: none;
-}
-
-.copyright p {
-    font-size: 0.9rem;
-    color: var(--text-color);
-}
-
-.logo2 {
-    color: var(--text-color);
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin: 0 auto 0 0;
-    font-style: smooth;
-    font-kerning: 1rem;
-    font-stretch: ultra-expanded;
-    text-transform: uppercase;
-    font-family: 'Games', sans-serif;
-}
-
-.logo2 span {
-    color: var(--main-color);
-    font-family: 'Games', sans-serif;
-}
-
-.copyright .link {
-    color: var(--main-color);
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Download Page Styles */
-
-.video-container video {
-    width: 100%;
-    aspect-ratio: 16/9;
-}
-
-.video-container {
-    margin-top: 2rem;
-    cursor: pointer;
-    user-select: none;
-}
-
-.about-icon {
-    width: 20px;
-    text-align: center;
-    margin-right: 10px;
-    height: 24px;
-}
-
-.about h2 {
-    font-size: 1.4rem;
-    display: inline-flex;
-    font-weight: 500;
-    border-bottom: 4px solid var(--main-color);
-    margin: 1.6rem 0;
-    text-transform: uppercase;
-}
-
-.about {
-    margin-top: 2rem;
-}
-
-.about p {
-    margin-top: 1rem;
-    font-size: 0.938rem;
-    text-align: justify;
-}
-
-.screenshots h2 {
-    font-size: 1.4rem;
-    display: inline-flex;
-    font-weight: 500;
-    border-bottom: 4px solid var(--main-color);
-    margin: 1.6rem 0;
-    text-transform: uppercase;
-}
-
-.screenshots-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-    gap: 10px;
-    justify-content: center;
-    max-width: 800px;
-    margin: auto;
-    width: 100%;
-}
-
-.screenshots-content img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.download {
-    max-width: 800px;
-    margin: auto;
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    margin-top: 2rem;
-    text-align: center;
-}
-
-.download h2 {
-    font-size: 1.4rem;
-    display: inline-flex;
-    font-weight: 500;
-    margin: 1.6rem 0;
-    text-transform: uppercase;
-    margin-left: 150px;
-}
-
-.game-heading {
-    display: inline-flex;
-    margin-left: 9rem;
-    user-select: none;
-    cursor: text;
-}
-
-.game-heading h1 {
-    font-size: 2.5rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-family: 'Games', sans-serif;
-    color: var(--text-color);
-}
-
-.game-heading .s-icon {
-    margin-top: 7rem;
-    width: 30px;
-    height: 30px;
-    margin-right: 1rem;
-    border-radius: 0.5rem;
-}
-
-.download .bx {
-    margin-right: 10px;
-    font-size: 1.4rem;
-    color: var(--light-color);
-}
-
-.download-links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 2rem;
-}
-
-.download-links a {
-    text-align: center;
-    background-color: var(--main-color);
-    padding: 12px 20px;
-    color: var(--text-color);
-    letter-spacing: 1px;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-family: 'Games', sans-serif;
-    display: flex;
-
-}
-
-.download-links a:hover,
-.download-links a:focus {
-    background-color: var(--light-color);
-    transition: 0.3s all linear;
-}
-
-.download-links .bx {
-    text-align: center;
-    color: var(--text-color);
-}
-
-/* ScrollBar Style */
-
+/* Scroll Progress Bar */
 html::-webkit-scrollbar {
     display: none;
 }
@@ -620,193 +385,11 @@ html::-webkit-scrollbar {
     top: 0;
     left: 0;
     height: 4px;
-    z-index: 300;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .progress-bar {
-    height: 4px;
+    height: 100%;
     background-color: var(--main-color);
-    width: 100%;
-}
-
-/* Responsive Media Queries */
-
-@media (min-width: 1080px) {
-    .container {
-        margin: 0 auto;
-        width: 90%;
-    }
-
-    .nav {
-        padding: 10px 0;
-    }
-
-    .notification {
-        right: 4rem;
-    }
-
-    .menu img {
-        width: 500px;
-    }
-
-    section {
-        padding: 3rem 0 2rem;
-    }
-
-    .home {
-        margin-top: 4rem !important;
-        min-height: 440px;
-    }
-
-    .home img {
-        border-radius: 1px;
-    }
-
-    .new-content {
-        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-
-    }
-
-    .video-container {
-        margin-top: 5rem !important;
-    }
-
-    .game-heading {
-        text-align: center;
-        justify-content: center;
-    }
-
-}
-
-/* For Medium Devices */
-@media (max-width: 774px) {
-    .notification {
-        right: 1rem;
-    }
-
-    .logo:hover,
-    .logo:focus {
-        transform: none;
-    }
-
-    .menu img {
-        width: 400px;
-    }
-
-    .home {
-        min-height: 300px;
-    }
-
-    .btn {
-        padding: 12px 7px;
-    }
-
-    .screenshots-content {
-        grid-template-columns: repeat(auto-fit, minmax(250, 300px));
-    }
-
-    .about {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .screenshots h2 {
-        margin-left: 10px;
-    }
-
-    .download-links {
-        grid-template-columns: 1fr;
-        margin-top: 2rem;
-    }
-
-    .download h2 {
-        margin: 0;
-    }
-
-    .download-links a {
-
-        text-align: center;
-        justify-content: center;
-    }
-
-    .up-page {
-        display: none;
-    }
-
-    .heading h2 {
-        text-align: center;
-        padding: 10px;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 600px) {
-    .menu img {
-        display: none;
-    }
-
-    .menu {
-        justify-content: flex-end;
-    }
-
-    .nav {
-        padding: 8px 0;
-    }
-
-    .nav-icons .bx,
-    .menu-icon {
-        height: 40px;
-        width: 40px;
-    }
-
-    .download-links {
-        grid-template-columns: 1fr;
-        margin-top: 2rem;
-    }
-
-    .about {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .screenshots h2 {
-        margin-left: 10px;
-    }
-
-    .download-links a {
-        text-align: center;
-        justify-content: center;
-    }
-
-    .download h2 {
-        margin: 0;
-    }
-
-    .up-page {
-        display: none;
-    }
-
-    .heading h2 {
-        text-align: center;
-        padding: 10px;
-        justify-content: center;
-    }
-
-    .logo:hover,
-    .logo:focus {
-        transform: none;
-    }
-
-    .home {
-        min-height: 240px;
-    }
-
-    .home-text {
-        padding-right: 1rem;
-    }
-
-    p {
-        font-size: 0.75rem;
-    }
 }
